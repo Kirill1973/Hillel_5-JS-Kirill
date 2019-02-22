@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" 
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" 
+        crossorigin="anonymous" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="sandwich header__sandwich">
+                    <button type="button" class="sandwich__button">
+                        <i class="sandwich__icon fas fa-bars"></i>
+                    </button>
+                </div>
+                <nav class="nav header__nav">
+                    <ul class="nav__items">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Link 1</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Link 1</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Link 1</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Link 1</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Link 1</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Link 1</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="content">
+                <div class="sidebar content__sidebar">
+                    <nav class="nav-content sidebar__nav">
+                        <ul class="nav-content__items">
+                            <li class="nav-content__item">
+                                <a href="#" class="nav-content__link">Link 1</a>
+                            </li>
+                            <li class="nav-content__item">
+                                <a href="#" class="nav-content__link">Link 2</a>
+                            </li>
+                            <li class="nav-content__item">
+                                <a href="#" class="nav-content__link">Link 3</a>
+                            </li>
+                            <li class="nav-content__item">
+                                <a href="#" class="nav-content__link">Link 4</a>
+                            </li>
+                            <li class="nav-content__item">
+                                <a href="#" class="nav-content__link">Link 5</a>
+                            </li>
+                            <li class="nav-content__item">
+                                <a href="#" class="nav-content__link">Link 6</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="sandwich content__sandwich">
+                    <button type="button" class="sandwich__button">
+                        <i class="sandwich__icon fas fa-bars"></i>
+                    </button>
+                </div>
+            </main>
+            <footer class="footer">
+                <nav class="nav footer__nav">
+                    <ul class="nav__items">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Link 1</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Link 1</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Link 1</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Link 1</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Link 1</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Link 1</a>
+                        </li>
+                    </ul>
+                </nav>
+            </footer>
+        </div>
+
+        <script>
+        let sideBtnHeader = document.querySelector('.header__sandwich');
+        let sideBtnContent = document.querySelector('.content__sandwich');
+        let sidebar = document.querySelector('.sidebar');
+        sideBtnContent.addEventListener('click', function() {
+            sidebar.classList.toggle('content__sidebar--none');
+            sideBtnContent.classList.toggle('content__sandwich--left');
+        }, false);
+        sideBtnHeader.addEventListener('click', function() {
+            sidebar.classList.toggle('content__sidebar--top')
+        }, false);
+        </script>
+    </body>
+</html>

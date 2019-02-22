@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+  
+body { 
+    height: 100%; 
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a { 
+    text-decoration: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    border-bottom: 3px solid rgb(165, 164, 156);
+    justify-content: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__items {
+    display: flex;
+}
+
+.nav__item {
+    margin-right: 20px;
+}
+
+.nav__item:last-child {
+    margin-right: 0;
+}
+
+.nav__link {
+    color: grey;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav__link:hover {
+    color: red;
+}
+
+.header__sandwich {
+    display: none;
+}
+
+.content { 
+    display: flex;
+    flex: 1 0 auto; 
+}
+
+.sidebar {
+    background-color: rgb(216, 215, 203);
+    overflow: auto;
+    transition: all 1s;
+}
+
+.content__sidebar {
+    position: absolute;
+    top: 63px;
+    left: 0;
+    width: 250px;
+    height: 700px;
+    border-right: 1px solid gray;
+}
+
+.nav-content {
+    padding-top: 20px;
+    width: 210px;
+    margin: 0 auto;
+}
+
+.nav-content__item {
+    margin-bottom: 20px;
+}
+
+.nav-content__item:last-child {
+    margin-bottom: 0;
+}
+
+.nav-content__link {
+    color: gray;
+    font-size: 18px;
+}
+
+.nav-content__link:hover {
+    color: red;
+}
+
+.content__sandwich {
+    position: absolute;
+    top: 67px;
+    left: 260px;
+    transition: all 1s;
+}
+
+.sandwich__button {
+    border: none;
+    background: none;
+}
+
+.sandwich__button:hover {
+    background: rgb(221, 216, 216);
+    border-radius: 50px;
+}
+
+.sandwich__button:focus {
+    outline: none;
+}
+
+.content__sidebar--none {
+    left: -260px;
+}
+
+.content__sandwich--left {
+    left: 0px;
+}
+
+.content__sidebar--top {
+    margin-top: 263px;
+}
+
+.sandwich__icon {
+    padding: 12px;
+    font-size: 31px;
+    color: rgb(121, 113, 113);
+}
+
+.footer__nav {
+    display: flex;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(182, 180, 163);
+    flex: 0 0 auto;
+}
+
+@media screen and (max-width:860px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .header__sandwich {
+        display: block;
+    }
+    .content__sandwich {
+        display: none;
+    }
+    .content__sidebar {
+        position: absolute;
+        top: -200px;
+        width: 100%;
+        height: 200px;
+    }
+}
